@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razzi Ronaldi - AI Engineer Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-gradient {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .card-gradient-2 {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .card-gradient-3 {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+        
+        .card-gradient-4 {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+        
+        .card-gradient-5 {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        }
+        
+        .card-gradient-6 {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        }
+        
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .skill-bar {
+            height: 8px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 4px;
+            animation: skillLoad 2s ease-in-out;
+        }
+        
+        @keyframes skillLoad {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .typing-animation {
+            overflow: hidden;
+            border-right: 3px solid;
+            white-space: nowrap;
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #667eea; }
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="gradient-text text-2xl font-bold">Razzi Ronaldi</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-purple-600 transition-colors">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-purple-600 transition-colors">About</a>
+                    <a href="#skills" class="text-gray-700 hover:text-purple-600 transition-colors">Skills</a>
+                    <a href="#education" class="text-gray-700 hover:text-purple-600 transition-colors">Education</a>
+                    <a href="#contact" class="text-gray-700 hover:text-purple-600 transition-colors">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-700 hover:text-purple-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="floating-animation absolute top-10 left-10 w-20 h-20 bg-white rounded-full"></div>
+            <div class="floating-animation absolute top-32 right-20 w-16 h-16 bg-pink-300 rounded-full" style="animation-delay: -2s;"></div>
+            <div class="floating-animation absolute bottom-20 left-32 w-24 h-24 bg-yellow-300 rounded-full" style="animation-delay: -4s;"></div>
+            <div class="floating-animation absolute bottom-32 right-10 w-12 h-12 bg-green-300 rounded-full" style="animation-delay: -1s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="floating-animation">
+                <div class="w-48 h-48 bg-white rounded-full mx-auto mb-8 shadow-2xl flex items-center justify-center">
+                    <i class="fas fa-user text-8xl text-purple-600"></i>
+                </div>
+            </div>
+            
+            <h1 class="text-6xl md:text-8xl font-bold text-white mb-4 typing-animation">
+                Razzi Ronaldi
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-white mb-8 opacity-90">
+                Future AI Engineer | Tech Enthusiast | Problem Solver
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#about" class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold hover:bg-purple-100 transition-all duration-300 hover-scale">
+                    <i class="fas fa-user mr-2"></i>About Me
+                </a>
+                <a href="#contact" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 hover-scale">
+                    <i class="fas fa-envelope mr-2"></i>Contact
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold gradient-text mb-4">About Me</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Passionate tech enthusiast with dreams of revolutionizing AI technology
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="card-gradient p-8 rounded-3xl text-white shadow-2xl hover-scale">
+                        <h3 class="text-2xl font-bold mb-4">
+                            <i class="fas fa-rocket mr-3"></i>Career Vision
+                        </h3>
+                        <p class="text-lg leading-relaxed">
+                            Aspiring AI Engineer with a clear path toward Microsoft. Currently pursuing Manajemen Informatika 
+                            at Politeknik Negeri Lampung, focusing on cutting-edge technologies like Artificial Super Intelligence.
+                        </p>
+                    </div>
+                    
+                    <div class="card-gradient-2 p-8 rounded-3xl text-white shadow-2xl hover-scale">
+                        <h3 class="text-2xl font-bold mb-4">
+                            <i class="fas fa-brain mr-3"></i>Tech Interests
+                        </h3>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-lg">
+                                <i class="fas fa-robot mr-2"></i>AI Engineering
+                            </div>
+                            <div class="bg-white bg-opacity-20 p-3 rounded-lg">
+                                <i class="fas fa-link mr-2"></i>Blockchain
+                            </div>
+                            <div class="bg-white bg-opacity-20 p-3 rounded-lg">
+                                <i class="fas fa-atom mr-2"></i>Quantum Computing
+                            </div>
+                            <div class="bg-white bg-opacity-20 p-3 rounded-lg">
+                                <i class="fas fa-chart-line mr-2"></i>Machine Learning
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="card-gradient-3 p-8 rounded-3xl text-white shadow-2xl hover-scale">
+                        <h3 class="text-2xl font-bold mb-6">
+                            <i class="fas fa-info-circle mr-3"></i>Quick Facts
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-birthday-cake w-6 mr-3"></i>
+                                <span>23 Desember 2007, Bengkulu</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-graduation-cap w-6 mr-3"></i>
+                                <span>Politeknik Negeri Lampung (2025)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-briefcase w-6 mr-3"></i>
+                                <span>Freelance IT Developer</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-heart w-6 mr-3"></i>
+                                <span>Gaming & Trading</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-gradient-4 p-8 rounded-3xl text-white shadow-2xl hover-scale">
+                        <h3 class="text-2xl font-bold mb-4">
+                            <i class="fas fa-star mr-3"></i>Core Values
+                        </h3>
+                        <div class="grid grid-cols-3 gap-3">
+                            <div class="text-center">
+                                <i class="fas fa-lightbulb text-3xl mb-2"></i>
+                                <p class="font-semibold">Innovation</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-users text-3xl mb-2"></i>
+                                <p class="font-semibold">Leadership</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-puzzle-piece text-3xl mb-2"></i>
+                                <p class="font-semibold">Problem Solving</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold gradient-text mb-4">Technical Skills</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Mastering multiple programming languages and technologies
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="card-gradient p-6 rounded-3xl text-white shadow-2xl hover-scale pulse-animation">
+                    <div class="text-center">
+                        <i class="fab fa-python text-6xl mb-4"></i>
+                        <h3 class="text-xl font-bold">Python</h3>
+                        <p class="text-sm opacity-90">AI & ML Development</p>
+                    </div>
+                </div>
+                
+                <div class="card-gradient-2 p-6 rounded-3xl text-white shadow-2xl hover-scale pulse-animation" style="animation-delay: 0.2s;">
+                    <div class="text-center">
+                        <i class="fab fa-html5 text-6xl mb-4"></i>
+                        <h3 class="text-xl font-bold">HTML</h3>
+                        <p class="text-sm opacity-90">Web Development</p>
+                    </div>
+                </div>
+                
+                <div class="card-gradient-3 p-6 rounded-3xl text-white shadow-2xl hover-scale pulse-animation" style="animation-delay: 0.4s;">
+                    <div class="text-center">
+                        <i class="fas fa-code text-6xl mb-4"></i>
+                        <h3 class="text-xl font-bold">Rust</h3>
+                        <p class="text-sm opacity-90">Systems Programming</p>
+                    </div>
+                </div>
+                
+                <div class="card-gradient-4 p-6 rounded-3xl text-white shadow-2xl hover-scale pulse-animation" style="animation-delay: 0.6s;">
+                    <div class="text-center">
+                        <i class="fas fa-terminal text-6xl mb-4"></i>
+                        <h3 class="text-xl font-bold">Go</h3>
+                        <p class="text-sm opacity-90">Backend Development</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card-gradient-5 p-6 rounded-3xl text-gray-800 shadow-2xl hover-scale pulse-animation" style="animation-delay: 0.8s;">
+                    <div class="text-center">
+                        <i class="fas fa-gem text-6xl mb-4"></i>
+                        <h3 class="text-xl font-bold">Ruby</h3>
+                        <p class="text-sm opacity-90">Web Applications</p>
+                    </div>
+                </div>
+                
+                <div class="card-gradient-6 p-6 rounded-3xl text-gray-800 shadow-2xl hover-scale pulse-animation" style="animation-delay: 1.0s;">
+                    <div class="text-center">
+                        <i class="fas fa-calculator text-6xl mb-4"></i>
+                        <h3 class="text-xl font-bold">Julia</h3>
+                        <p class="text-sm opacity-90">Scientific Computing</p>
+                    </div>
+                </div>
+                
+                <div class="card-gradient p-6 rounded-3xl text-white shadow-2xl hover-scale pulse-animation" style="animation-delay: 1.2s;">
+                    <div class="text-center">
+                        <i class="fab fa-java text-6xl mb-4"></i>
+                        <h3 class="text-xl font-bold">Java</h3>
+                        <p class="text-sm opacity-90">Enterprise Applications</p>
+                    </div>
+                </div>
+                
+                <div class="card-gradient-2 p-6 rounded-3xl text-white shadow-2xl hover-scale pulse-animation" style="animation-delay: 1.4s;">
+                    <div class="text-center">
+                        <i class="fas fa-cogs text-6xl mb-4"></i>
+                        <h3 class="text-xl font-bold">C++</h3>
+                        <p class="text-sm opacity-90">Performance Critical</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-gray-100 p-8 rounded-3xl">
+                <h3 class="text-3xl font-bold text-center mb-8 gradient-text">Soft Skills</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-24 h-24 bg-purple-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <i class="fas fa-users text-4xl text-purple-600"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Leadership</h4>
+                        <p class="text-gray-600">Leading teams and projects with vision</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <i class="fas fa-lightbulb text-4xl text-blue-600"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Problem Solving</h4>
+                        <p class="text-gray-600">Analytical thinking and creative solutions</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-24 h-24 bg-green-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <i class="fas fa-handshake text-4xl text-green-600"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">Teamwork</h4>
+                        <p class="text-gray-600">Collaborative and supportive team member</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Experience -->
+    <section id="education" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold gradient-text mb-4">Education & Experience</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Building expertise through education and practical experience
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <div class="card-gradient p-8 rounded-3xl text-white shadow-2xl hover-scale">
+                        <h3 class="text-2xl font-bold mb-6">
+                            <i class="fas fa-graduation-cap mr-3"></i>Education
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-white pl-4">
+                                <h4 class="font-bold text-lg">Politeknik Negeri Lampung</h4>
+                                <p class="opacity-90">Manajemen Informatika</p>
+                                <p class="text-sm opacity-75">2025 - Present</p>
+                            </div>
+                            <div class="border-l-4 border-white pl-4">
+                                <h4 class="font-bold text-lg">SMA Graduate</h4>
+                                <p class="opacity-90">Senior High School</p>
+                                <p class="text-sm opacity-75">Completed</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-gradient-2 p-8 rounded-3xl text-white shadow-2xl hover-scale">
+                        <h3 class="text-2xl font-bold mb-6">
+                            <i class="fas fa-language mr-3"></i>Languages
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="font-semibold">Bahasa Indonesia</span>
+                                <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">Native</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="font-semibold">English</span>
+                                <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">Proficient</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="card-gradient-3 p-8 rounded-3xl text-white shadow-2xl hover-scale">
+                        <h3 class="text-2xl font-bold mb-6">
+                            <i class="fas fa-briefcase mr-3"></i>Experience
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-white pl-4">
+                                <h4 class="font-bold text-lg">Freelance IT Developer</h4>
+                                <p class="opacity-90">Independent Contractor</p>
+                                <p class="text-sm opacity-75">1 Year Experience</p>
+                                <p class="text-sm mt-2">
+                                    Developing solutions and gaining hands-on experience in technology
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-gradient-4 p-8 rounded-3xl text-white shadow-2xl hover-scale">
+                        <h3 class="text-2xl font-bold mb-6">
+                            <i class="fas fa-target mr-3"></i>Career Goals
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                                <div class="flex items-center">
+                                    <i class="fas fa-building mr-3 text-2xl"></i>
+                                    <div>
+                                        <h4 class="font-bold">Dream Company</h4>
+                                        <p class="opacity-90">Microsoft</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                                <div class="flex items-center">
+                                    <i class="fas fa-robot mr-3 text-2xl"></i>
+                                    <div>
+                                        <h4 class="font-bold">Target Role</h4>
+                                        <p class="opacity-90">AI Engineer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                                <div class="flex items-center">
+                                    <i class="fas fa-brain mr-3 text-2xl"></i>
+                                    <div>
+                                        <h4 class="font-bold">Future Focus</h4>
+                                        <p class="opacity-90">Artificial Super Intelligence</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-white mb-4">Get In Touch</h2>
+                <p class="text-xl text-white opacity-90 max-w-2xl mx-auto">
+                    Ready to collaborate on innovative projects or discuss opportunities
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-8">
+                        <div class="bg-white bg-opacity-20 p-6 rounded-3xl backdrop-blur-sm hover-scale">
+                            <div class="flex items-center">
+                                <div class="w-16 h-16 bg-white bg-opacity-30 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-2xl text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-bold text-lg">Email</h3>
+                                    <p class="text-white opacity-90">razzironaldi@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white bg-opacity-20 p-6 rounded-3xl backdrop-blur-sm hover-scale">
+                            <div class="flex items-center">
+                                <div class="w-16 h-16 bg-white bg-opacity-30 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone text-2xl text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-bold text-lg">Phone</h3>
+                                    <p class="text-white opacity-90">+6282298852827</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white bg-opacity-20 p-6 rounded-3xl backdrop-blur-sm hover-scale">
+                            <div class="flex items-center">
+                                <div class="w-16 h-16 bg-white bg-opacity-30 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-map-marker-alt text-2xl text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-bold text-lg">Location</h3>
+                                    <p class="text-white opacity-90">Bengkulu, Indonesia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white bg-opacity-20 p-8 rounded-3xl backdrop-blur-sm">
+                        <h3 class="text-2xl font-bold text-white mb-6 text-center">Let's Connect!</h3>
+                        <div class="grid grid-cols-2 gap-4 mb-8">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-white bg-opacity-30 rounded-full mx-auto mb-3 flex items-center justify-center">
+                                    <i class="fas fa-gamepad text-2xl text-white"></i>
+                                </div>
+                                <h4 class="text-white font-semibold">Gaming</h4>
+                                <p class="text-white opacity-75 text-sm">Passionate Gamer</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-white bg-opacity-30 rounded-full mx-auto mb-3 flex items-center justify-center">
+                                    <i class="fas fa-chart-line text-2xl text-white"></i>
+                                </div>
+                                <h4 class="text-white font-semibold">Trading</h4>
+                                <p class="text-white opacity-75 text-sm">Market Enthusiast</p>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <a href="mailto:razzironaldi@gmail.com" class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold hover:bg-purple-100 transition-all duration-300 hover-scale inline-block">
+                                <i class="fas fa-paper-plane mr-2"></i>Send Message
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <h3 class="text-3xl font-bold mb-4 gradient-text">Razzi Ronaldi</h3>
+                <p class="text-gray-400 mb-8">Future AI Engineer • Tech Innovator • Problem Solver</p>
+                
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="mailto:razzironaldi@gmail.com" class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center hover:bg-purple-700 transition-colors hover-scale">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:082160737466" class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors hover-scale">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors hover-scale">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </a>
+                </div>
+                
+                <div class="border-t border-gray-800 pt-8">
+                    <p class="text-gray-400">
+                        © 2024 Razzi Ronaldi. Crafted with passion for innovation and technology.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const nav = document.querySelector('nav');
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-white', 'shadow-lg');
+            } else {
+                nav.classList.remove('bg-white', 'shadow-lg');
+            }
+        });
+
+        // Add intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Add floating animation to skill cards
+        const skillCards = document.querySelectorAll('.pulse-animation');
+        skillCards.forEach((card, index) => {
+            card.style.animationDelay = ${index * 0.2}s;
+        });
+
+        // Add typing effect to hero text
+        const heroText = document.querySelector('.typing-animation');
+        if (heroText) {
+            const text = heroText.textContent;
+            heroText.textContent = '';
+            let i = 0;
+            const typing = setInterval(() => {
+                if (i < text.length) {
+                    heroText.textContent += text.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(typing);
+                }
+            }, 100);
+        }
+    </script>
+</body>
+</html>
